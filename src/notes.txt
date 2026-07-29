@@ -1,0 +1,9 @@
+model -> o que existe no mundo do banco /  o que é possível fazer com uma conta bancária
+service -> regras de negócio, como o banco deve operar quando estiver realizando essas operações
+ui -> como o usuário conversa com o sistema, por onde ele navega para realizar as ações dentro do banco
+utils -> ferramentas genéricas que todos reaproveitam
+
+se um dia trocar o console por uma interface gráfica mais refinada e interativa somente o que está dentro de "ui"
+irá ser alterado, não compromentendo as outras partes do desenvolvimento
+
+Conta Corrente e Poupança são polimorfismo na prática
