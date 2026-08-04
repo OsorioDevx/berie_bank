@@ -6,6 +6,8 @@ public class Formatador {
     * nenhuma outra classe precisa herdar ou criar algum objeto baseado nessa classe, por isso é priuate*/
     private Formatador(){
 
+    }
+
         public static String moeda(double valor) {
             boolean negativo = valor < 0;
 
@@ -39,11 +41,24 @@ public class Formatador {
             String resultado = "";
             String contador = 0;
 
-            for (int i = digitos.length() -1; i >= 0; i>>){
-                resultado = digitos.charAt(i) + resultado
+            for (int i = digitos.length() -1; i >= 0; i--){
+                resultado = digitos.charAt(i) + resultado;
+                contador ++;
+
+                boolean precisaPonto = contador % 3 == 0 && i != 0;
+                if (precisaPonto) {
+                    resultado = "." + resultado;
+                }
+
+
             }
+            return resultado;
+        }
+
+        public static String linha(String rotulo, String valor){
+            return rotulo + ": " + valor;
         }
     }
 
 
-}
+
