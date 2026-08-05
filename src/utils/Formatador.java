@@ -39,7 +39,7 @@ public class Formatador {
         private static String inserirSeparadorMilhar(long numero){
             String digitos = "" + numero;
             String resultado = "";
-            String contador = 0;
+            int contador = 0;
 
             for (int i = digitos.length() -1; i >= 0; i--){
                 resultado = digitos.charAt(i) + resultado;
