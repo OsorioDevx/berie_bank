@@ -37,6 +37,8 @@ public abstract class Pessoa {
     }
 
 
+    /*mostra só os dois primeiros e os dois últimos números do cpf, o resto é coberto com ***
+    * 05*.***.***-48*/
     public String getCpfMascarado(){
         String inicio = cpf.substring(0, 3);
         String fim = cpf.substring(9, 11);
@@ -46,6 +48,11 @@ public abstract class Pessoa {
 
     public abstract String getDescricao();
 
+
+    /* ESSE MÓDULO ESTA SUBSTITUINDO O DA CLASSE PAI
+    sobrescreve o toString que é padrão do Object para ele ter um retorno diferente do que normalmente vem
+    * que é o endereço da meória, ao invés disso ele retorna o parâmetro que eu defini:
+    * return getDescricao() + "| Nome: " + getNome() + " | CPF: " + getCpfMascarado();*/
     @Override
     public String toString() {
         return getDescricao() + "| Nome: " + getNome() + " | CPF: " + getCpfMascarado();
